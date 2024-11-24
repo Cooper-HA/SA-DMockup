@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layouts/layout}">
+
+<head>
+    <title>Hello Spring Boot!</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link href="http://cdn.jsdelivr.net/webjars/bootstrap/3.3.6/css/bootstrap.min.css"
+          th:href="@{/webjars/bootstrap/3.3.6/css/bootstrap.min.css}"
+          rel="stylesheet" media="screen" />
+    <link href="../static/css/core.css"
+          th:href="@{/css/core.css}"
+          rel="stylesheet" media="screen" />
+    <script src="http://cdn.jsdelivr.net/webjars/jquery/2.2.3/jquery.min.js"
+            th:src="@{/webjars/jquery/2.2.3/jquery.min.js}"></script>
+</head>
+<body>
+<!-- Insert content into the layouts/layout.html -->
+
+<th:block layout:fragment="content">
+    <section id="details">
+    <h3>Location:</h3>
+         <div th:object="${cou}">
+		     <p>Name: <span th:text="*{City}">Location name</span>.</p>
+			 <p>Postal Code: <span th:text="*{PostalCode}">Location Postal Code</span>.</p>
+		     <p>Country: <span th:text="*{country.countryName}">Country</span>.</p>
+
+		 </div>
+
+    </section>
+   <div th:if="${cou.employees != null}">
+ 	    <section id="employees">
+	    	<h3><span th:text="${emplyeeCount}">123</span> Employees:</h3>
+	  		<div th:each="l : ${cou.employees}">
+				<p th:text="${l.city}">City</p>
+			</div>
+	    </section>
+	</div>
+   
+</th:block>
+</body>
+</html>
