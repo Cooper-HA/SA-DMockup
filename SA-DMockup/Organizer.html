@@ -12,7 +12,34 @@
   </head>
   <body>
     <main>
-        <h1>Organizer Form</h1>  
+        <h1>Organizer Form</h1> 
+        
+        <button type="button" id="buttonHomePage" onclick="window.location.href='Home.html'">Back to Home</button><br><br>
+
+        <form>
+            <label for="fname">First Name:</label><br>
+            <input type="text" id="fname" name="fname"><br><br>
+            
+            <label for="lname">Last Name:</label><br>
+            <input type="text" id="lname" name="lname"><br><br>
+            
+            <label for="school">School:</label><br>
+            <input type="text" id="school" name="school"><br><br>
+
+            <label for="tournament">Tournament Title:</label><br>
+            <input type="text" id="tournament" name="tournament"><br><br>
+
+            <label for="description">Description:</label><br>
+            <textarea id="description" name="description" rows="4" cols="50"></textarea><br><br>
+
+            <label for="date">Date:</label><br>
+            <input type="date" id="date" name="date"><br><br>
+
+            <label for="slots">Open Slots:</label><br>
+            <input type="number" id="slots" name="slots"><br><br>
+
+            <input type="submit" value="Submit">
+        </form> 
     </main>
     <script src="js/main.js"></script>
   </body>

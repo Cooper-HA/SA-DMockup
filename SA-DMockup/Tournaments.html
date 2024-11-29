@@ -6,13 +6,50 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="Author" content="Cali Crouse">
+        <meta name="Author" content="Cali Crouse">
     <link rel="stylesheet" href="css/styles.css">
     <title>Tournaments</title>
   </head>
   <body>
     <main>
         <h1>Tournaments</h1>  
+
+        <button type="button" id="buttonHomePage" onclick="window.location.href='Home.html'">Back to Home</button><br><br>
+
+        <table>
+            <thead>
+              <tr>
+                <th>Tournament</th>
+                <th>Status</th>
+                <th>Date</th>
+              </tr>
+            </thead>
+            
+            <tbody>
+              <!-- Example row structure -->
+              <tr>
+                <td class="tournament-column" onclick="showDetails('Tournament A')">Tournament A</td>
+                <td class="status-open">Accepting Applicants</td>
+                <td>2024-12-15</td>
+              </tr>
+              <tr>
+                <td class="tournament-column" onclick="showDetails('Tournament B')">Tournament B</td>
+                <td class="status-closed">Closed</td>
+                <td>2024-11-01</td>
+              </tr>
+            </tbody>
+          </table>
+        
+          <!-- Modal -->
+          <div id="overlay"></div>
+          <div id="detailsModal">
+            <h2 id="modalTitle"></h2>
+            <p><strong>Organizers:</strong> <span id="organizersList"></span></p>
+            <p><strong>Description:</strong> <span id="descriptionList"></span></p>
+            <p><strong>Coaches:</strong> <span id="coachesList"></span></p>
+            <p><strong>Students:</strong> <span id="studentsList"></span></p>
+            <button class="close-btn" onclick="closeModal()">Close</button>
+          </div>
     </main>
     <script src="js/main.js"></script>
   </body>

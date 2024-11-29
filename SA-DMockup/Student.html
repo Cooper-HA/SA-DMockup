@@ -13,6 +13,27 @@
   <body>
     <main>
         <h1>Student Form</h1>  
+
+        <button type="button" id="buttonHomePage" onclick="window.location.href='Home.html'">Back to Home</button><br><br> 
+
+        <form>
+            <label for="fname">First Name:</label><br>
+            <input type="text" id="fname" name="fname"><br><br>
+            
+            <label for="lname">Last Name:</label><br>
+            <input type="text" id="lname" name="lname"><br><br>
+
+            <label for="school">School:</label><br>
+            <input type="text" id="school" name="school"><br><br>
+
+            <label for="grade">Grade:</label><br>
+            <input type="number" id="grade" name="grade"><br><br>
+
+            <label for="tournamentDD">Choose a Tournament:</label><br>
+            <select id="tournamentDD" name="tournamentDD"></select><br><br>
+
+            <input type="submit" value="Submit">
+        </form> 
     </main>
     <script src="js/main.js"></script>
   </body>
